@@ -64,4 +64,53 @@ if (document.readyState == 'loading') {
     ready();
 }
 
+// Define the ready function
+function ready() {
+    var removecartbtn = document.getElementsByClassName('cart-remove');
+    for (var i = 0; i < removecartbtn.length; i++) {
+        var button = removecartbtn[i];
+        if (button) {
+            button.addEventListener('click', removecartitem);
+        }
+    }
 
+    var quantityInputs = document.getElementsByClassName("cart-quantity");
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        if (input) {
+            input.addEventListener("change", quantityChanged);
+        }
+    }
+
+    var addCartButtons = document.getElementsByClassName("add-cart");
+    for (var i = 0; i < addCartButtons.length; i++) {
+        var button = addCartButtons[i];
+        if (button) {
+            button.addEventListener("click", addCartClicked);
+        }
+    }
+
+    var buyButton = document.querySelector(".btn-buy");
+    if (buyButton) {
+        buyButton.addEventListener("click", buyButtonClicked);
+    }
+}
+
+
+function buyButtonClicked() {
+    alert("Your Order is placed");
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updatetotal();
+}
+
+// Quantity Changes
+function quantityChanged(event) {
+    var input = event.target;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    }
+    updatetotal();
+}
