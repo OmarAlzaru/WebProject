@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fb29d62ca8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+           <h2 >MaxMuscle</h2>
+            <div class="header-left-p">
+                <a href="#"></a>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <input class="header-center-input" type="text" placeholder="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        
+        <div class="login">
+            <a href="login.html" class="login-btn">login</a>
+            <div class="login_dropdown none">
+                <ul class="login_dropdown_list">
+                    <li class="login_dropdown_li sign_li flex">
+                        <p class="new_login">New Customer</p>
+                        <a href="signup.html" class="signup">Sign Up</a>
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-circle-user"></i>My Profile
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-bag-shopping"></i>Order
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-heart"></i>Wishlist
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="cart-ian"><i class="fa-solid fa-cart-shopping"></i>Cart</div>
+        
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+                <img src="" class="cart-img">
+                <div class="detail-box">
+                    <div class="cart-product-title">
+                        Product1
+                    </div>
+                    <div class="cart-price">700</div>
+                    <input type="number" value="1" class="cart-quantity">
+                </div>
+                <i class="fa-solid fa-trash cart-remove"></i>
+            </div>
+            
+            <!-- Additional content goes here -->
+            
+            <div class="total" id="cart-total">
+                <div class="total-title">Total</div>
+                <div class="total-price"></div>
+            </div>
+            
+            <button type="button" class="btn-buy" id="btn-buy">Buy Now</button>
+            <i class="fa-solid fa-rectangle-xmark" id="close-cart"></i>
+        </div>
+      
+    </header>
+    
+    <section class="main">
+            <div class="main-h">
+                <h5>Welcome To</h5>
+                <h1>MaxMuscle</h1>
+                <a href="products.html" class="main-btn">Shop Now <i class='bx bx-down-arrow-alt'></i></a>
+            </div>
+    
+        
+    </section>
+    
+    <section>
+        <div class="banner">
+            <div class="slider">
+                <img src="https://www.maxmuscleelite.com/web/image/1396813/vitalox1.png" alt="banner">
+                <img src="https://www.maxmuscleelite.com/web/image/1383817/no-joke.jpg" alt="banner">
+                <img src="https://www.maxmuscleelite.com/web/image/1405382/snack-attack-banner-center.jpg" alt="banner">
+                <img src="https://asnegypt.com/wp-content/uploads/2023/05/Pancakes-web.jpg" alt="banner">
+                <img src="https://asnegypt.com/wp-content/uploads/2021/09/faress-1.png" alt="banner">
+                <img src="https://asnegypt.com/wp-content/uploads/2022/02/banner-scaled.jpg" alt="banner">
+
+            </div>
+        </div>
+    </section>
+    <!--each section add the items to sell -->
+    
+    <footer>
+        <div class="footer-row">
+            <div class="footer-col-1">
+                <div class="footer-heading">
+                    <p>ABOUT</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <div class="footer-heading">
+                    <p>Help</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">payments</a>
+                    <a href="#">cancellation & return</a> 
+                    <a href="#">FAQ</a> 
+                </div>
+            </div>
+            <div class="footer-col-3">
+                <div class="footer-heading">
+                    <p>Policy</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">retrun policy</a>
+                    <a href="#">security</a> 
+                    <a href="#">privacy</a> 
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
