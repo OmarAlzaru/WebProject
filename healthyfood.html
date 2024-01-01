@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Equipment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fitness.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="cart.js"></script>
+    <script src="https://kit.fontawesome.com/fb29d62ca8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="#">website</a>
+            <div class="header-left-p">
+                <a href="#">explore</a>
+            </div>
+        </div>
+        <div class="header-center">
+        <input class="header-center-input" type="text" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="login">
+            <a href="login.html" class="login-btn">login</a>
+            <div class="login_dropdown none">
+                <ul class="login_dropdown_list ">
+                    <li class="login_dropdown_li sign_li flex">
+                        <p class="new_login">New Customer</p>
+                        <a href="signup.html" class="signup">Sign Up</a>
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-circle-user"></i>My Profile
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-bag-shopping"></i>Order
+                    </li>
+                    <li class="login_dropdown_li">
+                        <i class="fa-solid fa-heart"></i>Wishlist
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="myButton">
+        <span class="cart-ian"><i class="fa-solid fa-cart-shopping" id="cart-icon"></i>Cart</span></button>
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+                <!--<img src="" class="cart-img">-->
+                <div class="detail-box">
+                    <div class="cart-product-title">
+                    </div>
+                    <div class="cart-price"></div>
+                    <input type="number" value="" class="cart-quantity">
+                </div>
+               <!---<i class="fa-solid fa-trash cart-remove"></i>-->
+            </div>
+        <!---->
+        <div class="total" id="cart-total">
+            <div class="total-title">Total</div>
+            <div class="total-price"></div>
+        </div>
+        <button type="button" class="btn-buy" id="btn-buy">Buy Now</button>
+        <i class="fa-solid fa-rectangle-xmark" id="close-cart"></i>
+        </div>
+        </header>
+    <section>
+        <div class="head">
+            <h1></span></h1>
+        </div>
+    </section>
+
+    <section>
+
+        <!-- Individual Product Cards -->
+        <div class="common-row-column-deals">
+            <div class="common-col">
+                <img src="https://www.maxmuscleelite.com/web/image/product.product/7080/image_1920/%5B6222023700109%5D%20Organic%20Nation%20Matcha%20Burn-20Serv.-20Packs?unique=e0e3c94"
+                    class="product-img">
+                <h1>Organic Nation Matcha Burn</h1>
+                <h2 class="price">200LE</h2>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+
+        <div class="common-row-column-deals">
+            <div class="common-col">
+                <img src="https://www.maxmuscleelite.com/web/image/product.product/7035/image_1920/%5B6222023700406%5D%20Organic%20Nation%20Premium%20Matcha%20Powder-125Serv.-125G?unique=38ae320"
+                    class="product-img">
+                <h1>Organic Nation Premium Matcha Powder</h1>
+                <h2 class="price">500LE</h2>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+
+        <div class="common-row-column-deals">
+            <div class="common-col">
+                <img src="https://www.maxmuscleelite.com/web/image/product.product/6550/image_1920/%5B6222023700192%5D%20Organic%20Nation%20Mega%20Oats-600G?unique=1843892"
+                    class="product-img">
+                <h1>Organic Nation Mega Oats-600G</h1>
+                <h2 class="price">85LE</h2>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <!-- Footer Section -->
+        <div class="footer-row">
+            <div class="footer-col-1">
+                <div class="footer-heading">
+                    <p>ABOUT</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <div class="footer-heading">
+                    <p>Help</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">payments</a>
+                    <a href="#">cancellation & return</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-col-3">
+                <div class="footer-heading">
+                    <p>Policy</p>
+                </div>
+                <div class="footer-list">
+                    <a href="#">return policy</a>
+                    <a href="#">security</a>
+                    <a href="#">privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+            var mybutton=document.getElementById('myButton')
+            var element=document.getElementsByClassName('cart')[0]
+            var close=document.getElementById('close-cart')
+            mybutton.addEventListener('click',function(){
+                element.style.display = 'block';
+            })
+            close.addEventListener('click',function(){
+                element.style.display = 'none';
+            })
+    </script>
+</body>
+
+</html>
