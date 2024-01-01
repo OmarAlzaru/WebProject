@@ -35,7 +35,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Handle the error, e.g., display an error message or redirect to an error page
             echo "Error: " . $conn->error;
         }
-    } 
+    }  elseif (isset($_POST["update"])) {
+        $productIDToUpdate = isset($_POST["product-id"]) ? $_POST["product-id"] : null;
+        $sql = "UPDATE product SET name = ?, url = ?, price = ?, category = ? WHERE ID = ?";
+        $stmt = $conn->prepare($sql);
+    
+        // Check if the statement is prepared successfully
+        if ($stmt) {
+            $stmt->bind_param("ssdii", $productName, $imageURL, $price, $category, $productIDToUpdate);
+            $stmt->execute();
+            $stmt->close();
+    
+            // Optionally, you can redirect to a success page or display a success message
+            header("Location: products.html");
+            exit();
+        } else {
+            // Handle the error, e.g., display an error message or redirect to an error page
+            echo "Error: " . $conn->error;
+        }
+    } elseif (isset($_POST["delete"])) {
+        $productNameToDelete = isset($_POST["product-name"]) ? $_POST["product-name"] : null;
+
+        // Delete data from the Products table based on product name
+        $sql = "DELETE FROM product WHERE name = ?";
+        $stmt = $conn->prepare($sql);
+
+        // Check if the statement is prepared successfully
+        if ($stmt) {
+            $stmt->bind_param("s", $productNameToDelete);
+            $stmt->execute();
+            $stmt->close();
+
+            // Optionally, you can redirect to a success page or display a success message
+            header("Location: index.html");
+            exit();
+        } else {
+            // Handle the error, e.g., display an error message or redirect to an error page
+            echo "Error: " . $conn->error;
+        }
+    }
+}
 
 
 
