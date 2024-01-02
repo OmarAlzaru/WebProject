@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fb29d62ca8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="register.php" class="container" method="post" onsubmit="return validateForm()">
+        <div class="box">
+            <div class="row">
+                <div class="col-sm-5 col-xs-1 box1">
+                    <div class="inline-text">
+                        <h1>Look like you are<br>New here</h1>
+                        <p>Sign up with phone Number to continue</p>
+                    </div>
+                </div>
+            
+                <div class="col-sm-5 col-xs-1 box2">
+                    <div class="user-id user-data">
+                        <input type="email" name="email" id="username" required>
+                        <label>username</label>
+                    </div>
+                    <div class="user-id user-data">
+                        <input type="password" name="password" id="password" required>
+                        <label>Enter password</label>
+                    </div>
+                    <div class="user-id button">
+                        <input type="submit" name="" id="" value="continue">
+                    </div>
+                    <div class="user-id button">
+                        <input type="reset" name="" id="" value="existing user ? Log in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Reset error messages
+            document.getElementById("email-error").innerHTML = "";
+            document.getElementById("password-error").innerHTML = "";
+
+            var isValid = true;
+
+            // Validate email
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById("email-error").innerHTML = "Invalid email address";
+                isValid = false;
+            }
+
+            // Validate password (you can add more specific rules here)
+            if (password.length < 6) {
+                document.getElementById("password-error").innerHTML = "Password must be at least 6 characters long";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

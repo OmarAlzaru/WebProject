@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black !important;
+}
+.box{
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 750px;
+    height:565px;
+    background: white;
+    overflow: hidden;
+}
+
+.box1{
+    background: url();
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(51, 51, 233);
+}
+.inline-text{
+    color: white;
+    position: absolute;
+    top: 32px;
+    left: 60px;
+}
+.inline-text p{
+    color: rgb(218, 213, 213);
+    opacity: 0.9;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.inline-text h1{
+    color: white ;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.box2 .user-id{
+    position: relative;
+    left: 20px;
+    top: 50px;
+    padding: 10px 20px;
+}
+.box2 .user-id input{
+    width: 100%;
+    height: 40px;
+}
+.box2 .user-data input {
+    color: black;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: none;
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+.box2 .user-data label{
+    color: lightgray;
+    padding: 10px 20px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+.box2 .user-data input:focus ~ label,
+.box2 .user-data input:valid ~ label{
+    top: -20px;
+    font-size: 12px;
+}
+.box2 .user-data input:focus{
+    border-bottom: 1px solid blue;
+}
+
+.box2 .button{
+    padding-top: 50px;
+}
+.box2 .button input{
+    width: 330px;
+    height: 60px;
+    font-size:18px;
+    border:none;
+    background: white;
+}
+.user-id p{
+    font-size:32px;
+    color:rgb(172, 191, 191)
+}
+.box2 .button input[type=submit]{
+    background: orange;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: none;
+}
+.box2.button input[type=submit]:hover{
+    box-shadow: 2px 3px 5px 1px rgb(2, 2, 2);
+}
+.box2 .button input[type=reset]{
+    box-shadow: 2px 3px 3px 0px rgb(2, 2, 2);
+    border-radius: 2px;
+    color: blue;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: none;
+}
+.box2.button input[type=reset]:hover{
+    box-shadow: 2px 3px 2px 0px rgb(8, 8, 8);
+}
+
